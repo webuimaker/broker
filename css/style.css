@@ -1,10 +1,11 @@
 *{
     margin: 0 auto;
     padding:0;
+    
 }
+body{
 
-
-
+}
 header{
     padding-top:20px;
     background: linear-gradient(#081735, #1d3376);
@@ -15,6 +16,9 @@ header .display-4, .nav-link, span a{
 }
 header a.navbar-brand {
     margin-left: 3%;
+}
+header a.nav-link.btn-primary {
+    margin-left: 10px;
 }
 header nav ul a.nav-link.btn-primary {
     background: linear-gradient(#2c8135, #134119);
@@ -54,10 +58,10 @@ header a.nav-link:hover {
 header a.nav-link:active {
     color: #45b351;
 }
-main .col-md-1{
+main .col-md-2{
     padding: 5px 0;
 }
-main .col-md-10{
+main .col-md-8{
     padding: 5px;
 }
 main .carousel-indicators li {
@@ -78,6 +82,10 @@ main .btn-secondary:focus{
 }
 main .btn-secondary:hover{
     background: linear-gradient(#7fde89, #2d8036);
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
 }
 main .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active {
     background: linear-gradient(#7fde89, #2d8036);
@@ -132,6 +140,9 @@ padding-left: 0;
     border-radius: 0;
     color: #fff;
     background: #232428;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
@@ -266,6 +277,9 @@ footer .lnks{
         font-size: 13px;
         padding: 5px 5px;
     }
+    header a.nav-link.btn-primary {
+        margin-left: 3px;
+    }
     header li.nav-item {
         margin: 0;
     }
@@ -286,7 +300,7 @@ footer .lnks{
 }
 @media (min-width:992px) and (max-width:1024px){
     header a.nav-link {
-        font-size: 13px;
+        font-size: 12px;
         padding: 5px 5px;
     }
     header li.nav-item {
@@ -300,7 +314,7 @@ footer .lnks{
         color: #fff;
     }
     .footer-nav a.nav-link {
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px;
     }
     .cta ul li.nav-item {
@@ -309,10 +323,13 @@ footer .lnks{
 
 }
 @media screen and (max-width:991px){
+    header{
+        padding-top: 0;
+    }
     main .carousel-item img{
         height:auto;
     }
-    header .logo a.navbar-brand {
+    .top-nav{
         display: none;
     }
     header ul.nav.justify-content-end {
@@ -322,10 +339,10 @@ footer .lnks{
         margin-left: 0;
         width: 20%;
     }
-    main .col-md-1{
+    main .col-md-2{
         margin: 0;
     }
-    main .col-md-10{
+    main .col-md-8{
         margin-right: 0;
     }
 
@@ -343,7 +360,7 @@ footer .lnks{
     }
 }
 @media (min-width:768px) and (max-width:991px){
-    main .col-md-1 .buttons{
+    main .col-md-2 .buttons{
         width: 200%;
     }
     .cta ul li.nav-item {
@@ -351,24 +368,18 @@ footer .lnks{
     }
 }
 @media (min-width:480px) and (max-width:767px){
-    .top-nav .col-md-6 {
-        text-align: left;
-    display: block;
+    .top-nav {
+        display: none;
     }
     header .display-4{
-        display: none;
+        font-size: 40px;
     }
     header .top-nav .col-md-6.logo {
         text-align: center;
     }
-    header .logo a.navbar-brand {
-        font-size: 50px;
-        display: block;
-    }
+    
     header button.navbar-toggler {
-        position: relative;
         padding: .15rem .5rem;
-        bottom: 175px;
     }
     header a.nav-link.btn-primary {
         margin-left: 0;
@@ -394,12 +405,11 @@ footer .lnks{
     }
 }
 @media screen and (max-width:479px){
-    .top-nav .col-md-6 {
-        text-align: left;
-    display: block;
+    .top-nav  {
+        display: none;
     }
     header .display-4{
-        display: none;
+        font-size: 36px;
     }
     header a.navbar-brand{
         margin-right: 0;
@@ -414,9 +424,7 @@ footer .lnks{
     }
     
     header button.navbar-toggler {
-        position: relative;
         padding: .15rem .5rem;
-        bottom: 175px;
     }
     header a.nav-link.btn-primary {
         margin-left: 0;
