@@ -7,7 +7,7 @@ body{
 
 }
 header{
-    padding-top:20px;
+    padding-top:10px;
     background: linear-gradient(#081735, #1d3376);
     color: #fff;
 }
@@ -24,6 +24,9 @@ header nav ul a.nav-link.btn-primary {
     background: linear-gradient(#2c8135, #134119);
     border-radius: 5px;
     border: 2px solid #fff;
+}
+header nav.navbar.navbar-expand-lg.navbar-light {
+	padding: .5rem 1rem 0rem 1rem;
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
     box-shadow: none;
@@ -58,6 +61,9 @@ header a.nav-link:hover {
 header a.nav-link:active {
     color: #45b351;
 }
+.mobile{
+    display: none;       
+}
 main .col-md-2{
     padding: 5px 0;
 }
@@ -70,10 +76,11 @@ main .carousel-indicators li {
     border-radius: 100%;
 }
 main .carousel-item img{
-    height:500px;
+    height:390px;
 }
 main .btn-secondary{
-    width: 114px;
+    min-width: 80px;
+    padding: .5rem .25rem;
     border-radius: 5px; 
     background: linear-gradient(#392458, #0a3f8c);
 }
@@ -258,7 +265,7 @@ footer .lnks{
     }
     
     header .display-4{
-        font-size: 50px
+        font-size: 42px
     }
     .footer-nav span {
         font-size: 50px;
@@ -320,14 +327,15 @@ footer .lnks{
     .cta ul li.nav-item {
         margin-bottom: 5px;
     }
+    
 
 }
 @media screen and (max-width:991px){
     header{
         padding-top: 0;
     }
-    main .carousel-item img{
-        height:auto;
+    header nav.navbar.navbar-expand-lg.navbar-light {
+        padding: 10px 0;
     }
     .top-nav{
         display: none;
@@ -339,13 +347,55 @@ footer .lnks{
         margin-left: 0;
         width: 20%;
     }
+    .mobile{
+        display: block;  
+        background: #1565fb;     
+    }
+    .mobile button.navbar-toggler {
+        padding: .05rem .15rem;
+    }
+    .mobile li {
+        list-style: none;
+        margin-right: 15px;
+        padding: 0 10px;
+    }
+    .mobile li:last-child {
+        margin-right: 0;
+    }
+    .mobile ul{
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .mobile .navbar-light .navbar-toggler {
+        color: rgba(0,0,0,.5);
+        border-color: rgba(0,0,0,.1);
+        margin-bottom: 5px;
+        margin-top: 2px;
+        margin-right: 10px;
+    }
+    .buttons-dup .full {
+        width: 100%;
+    }
+    .buttons-dup a.list-group-item.btn-info {
+        background: #1e2832;
+        color: #fff;
+        border-radius: 0;
+        border: 1px solid #8f9499;
+        padding: .3rem 1.25rem;
+    }
     main .col-md-2{
         margin: 0;
+        display: none;
     }
     main .col-md-8{
         margin-right: 0;
     }
-
+    #carouselIndicators {
+        display: none;
+    }
+    .payment-logo {
+        display: none;
+    }
     main .ads {
         padding: 5px;
         display: none;
@@ -358,14 +408,50 @@ footer .lnks{
         font-size: 14px;
         padding: 5px;
     }
+    .dup .list-group.panel a {
+        text-align: left;
+        color: #fff;
+        margin: 0;
+    }
+    .dup i.fas.fa-plus{
+        float: right;
+    }
+    .buttons-dup a.btn.btn-default.btn-sm {
+        width: 100%;
+        background: #1e2832;
+        color: #fff;
+        border-radius: 0;
+        border: 1px solid #8f9499;
+        text-align: start;
+    }
+    .mobile nav.navbar.navbar-expand-lg.navbar-light {
+        padding: .12rem 0rem;
+    }
+    main .cta img {
+        width: 16px;
+    }
 }
 @media (min-width:768px) and (max-width:991px){
     main .col-md-2 .buttons{
         width: 200%;
     }
+    main .col-md-8{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    main .col-md-8 .cta{
+        width: 150%;
+    }
+    main .col-md-8 .board{
+        width: 150%;
+    }
     .cta ul li.nav-item {
         margin-bottom: 5px;
     }
+    main .cta img {
+        width: 16px;
+    }
+    
 }
 @media (min-width:480px) and (max-width:767px){
     .top-nav {
@@ -404,10 +490,17 @@ footer .lnks{
         margin-left: 0;
     }
 }
+@media screen and (max-width:484px){
+    .mobile li {
+        line-height: 1.2;
+        width: 79px;
+    }
+}
 @media screen and (max-width:479px){
     .top-nav  {
         display: none;
     }
+    
     header .display-4{
         font-size: 36px;
     }
