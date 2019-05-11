@@ -3,10 +3,155 @@
     padding:0;
     
 }
-body{
 
+/* login page */
+
+.login-background{
+    background-image: url(../images/bckgrnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-header{
+.login-background .navbar-brand .display-4{
+    font-size: 54px;
+    color: #fff;
+    font-weight: 600;
+}
+form {
+    max-width: 490px;
+    background-image: url(../images/form-bckgrnd.png);
+}
+
+form a.btn.btn-lg.btn-primary.btn-block {
+    padding: 18px 0px;
+    background: #1ca10f;
+    border-color: #fff;
+    font-size: 24px;
+    border-radius: 0;
+}
+form a.btn.btn-lg.btn-primary.btn-block:hover, .btn-block:active, .btn-block:focus, .btn-block:focus-within{
+    background: #1ca10f;
+    border-color:transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+.action{
+    display: flex;
+}
+.action ul{
+    display: contents;
+}
+.action ul li{
+    list-style: none;
+}
+.action ul li:first-child {
+    border-right: 2px solid #fff;
+    padding-right: 60px;
+}
+.action a span{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.action span.divder.mt-3{
+    color: #fff;
+    font-size: 24px;
+}
+.txt h3{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.txt p{
+    font-size: 24px;
+    color: #fff;
+}
+.form-signin input#inputEmail {
+    text-align: center;
+    height: 70px;
+    font-size: 24px;
+    border-radius: 0;
+}
+.form-signin input#inputPassword{
+    text-align: center;
+    height: 70px;
+    font-size: 24px;
+    border-radius: 0;
+}
+.form-signin input{
+    border-color: #000; 
+}
+.form-signin input:focus, input:focus-within{
+    border-color:transparent;
+    box-shadow: none;
+}
+.foot{
+    margin-top: 50px;
+    color: #fff;
+}
+
+
+
+/* @media Query */
+
+@media screen and (max-width:479px){
+    .action{
+        display:block;
+    }
+    .action ul li:first-child {
+        border-right: none;
+        padding-right: 0;
+    }
+    .txt h3 {
+        font-size: 19px!important;
+    }
+    .txt p {
+        font-size: 14px!important;
+        color: #fff;
+    }
+    .login-background .navbar-brand .display-4{
+        font-size: 34px;
+    }
+    .form-signin input#inputEmail {
+        height: 50px!important;
+    }
+    .form-signin input#inputPassword {
+        height: 50px!important;
+    }
+    form a.btn.btn-lg.btn-primary.btn-block {
+        padding: 4px 0px!important;
+    }
+}
+
+@media screen and (max-width:767px){
+    .action{
+        display:block;
+    }
+    .action ul li:first-child {
+        border-right: none;
+        padding-right: 0;
+    }
+    .txt h3 {
+        font-size: 30px;
+    }
+    .txt p {
+        font-size: 21px;
+        color: #fff;
+    }
+    .form-signin input#inputEmail {
+        height: 60px;
+    }
+    .form-signin input#inputPassword {
+        height: 60px;
+    }
+    form a.btn.btn-lg.btn-primary.btn-block {
+        padding: 10px 0px;
+    }
+}
+
+
+
+/* index page */
+.header{
     padding-top:10px;
     background: linear-gradient(#081735, #1d3376);
     color: #fff;
@@ -36,9 +181,7 @@ header nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #fff;
     border-color: transparent;
 }
-header .logo a.navbar-brand {
-    display: none;
-}
+
 .top-nav .col-md-6 {
         display: flex;
 }
@@ -257,6 +400,8 @@ footer .lnks{
     background-color: white;
 }
 
+
+
 /* *******@media******** */
 
 @media (min-width:1351px){
@@ -356,7 +501,6 @@ footer .lnks{
     }
     .mobile li {
         list-style: none;
-        margin-right: 15px;
         padding: 0 10px;
     }
     .mobile li:last-child {
@@ -452,6 +596,14 @@ footer .lnks{
         width: 16px;
     }
     
+    
+}
+
+@media (min-width:485px) and (max-width:505px){
+    .mobile li {
+        padding: 0 6px;
+    }
+
 }
 @media (min-width:480px) and (max-width:767px){
     .top-nav {
@@ -547,5 +699,105 @@ footer .lnks{
         display: block;
         /* text-align: left; */
         margin-left: 0;
+    }
+}
+
+
+
+/* inside page css */
+
+.score_display {
+    border: 1px groove;
+}
+.score_display span.badge.live {
+    background: #ed143d;
+    color: #fff;
+}
+.score_display p.teams-name {
+    font-size: 20px;
+}
+.score_display span.on-bat-team {
+    font-size: 24px;
+}
+.score_display span.live-score.badge {
+    font-size: 26px;
+    color: #fff;
+    background: #287730;
+}
+.score_display span.over-list.badge {
+    background: #001f60;
+    color: #fff;
+}
+.details .card-header {
+    width: 100%;
+    padding: 0;
+    background: #2a7d33;
+}
+.details a.btn.btn-link {
+    color: #fff;
+}
+.details a.btn.btn-link.collapsed {
+    color: #fff;
+}
+.details .btn-link:hover{
+    text-decoration: none;
+}
+.details .btn-link:focus {
+    text-decoration: none;
+}
+.details table tr{
+    border: none;
+}
+.details th.w-40 {
+    width: 60%;
+}
+.details span.font{
+    color: #1ca10f;
+}
+.details span.favour {
+    margin-right: 50%;
+    font-size: 12px;
+    color: #9027d0;
+}
+.details .card-header a.btn.btn-link {
+    padding: 0 10px;
+    font-size: 14px;
+}
+.details .card-header h2 {
+    font-size: 1rem;
+    padding: 3px;
+}
+.details th {
+    font-size: 14px;
+}
+.details .table td{
+    font-size: 14px;
+}
+.details .table th{
+    padding: 5px;
+}
+.details span.open_indicator {
+    padding: 0px 3px;
+    border-radius: 100%;
+    color: #fb0303;
+    background: #fb0303;
+    font-size: 10px;
+}
+.details a.dly-rprt:hover {
+    text-decoration: none;
+}
+.highlight{
+    background: yellow;
+} 
+
+
+/* *******@media***** */
+
+@media (min-width:768px) and (max-width:991px){
+    .score_display{
+        width: 151%;
+    }
+    .details {
+        width: 151%;
     }
 }
